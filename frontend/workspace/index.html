@@ -3649,7 +3649,7 @@
 </tr>
 <tr>
 <td>lint 状态栏</td>
-<td>编辑器底部（仅 TeX——唯一带 lint 源的模式）按严重度计数：错误（红 <code>CircleAlert</code>）/ 警告（amber <code>TriangleAlert</code>）/ 提示（sky <code>Info</code>）icon + 数字，零计数淡化；计数区即悬停目标，纯 CSS hover/focus 弹出问题卡列表（文档序，icon + 消息 + <code>L行:C列</code>，点击选中该 span、滚动并聚焦编辑器）。刷新经 <code>setDiagnosticsEffect</code> 监听（lint state 对外私有，该 effect 是公开信号；两源每次 run 合并为单事务）；实现 <code>text-editor-lint-footer.tsx</code></td>
+<td>编辑器底部（仅 TeX——唯一带 lint 源的模式）按严重度计数：错误（红 <code>CircleAlert</code>）/ 警告（amber <code>TriangleAlert</code>）/ 提示（sky <code>Info</code>）icon + 数字，零计数淡化；计数区即悬停目标，纯 CSS hover 弹出问题卡列表（文档序，icon + 消息 + <code>L行:C列</code>，点击选中该 span、滚动并聚焦编辑器）。group 用命名 <code>group/lint</code>——编辑器 wrapper 自带裸 <code>group</code>（工具栏 hover chrome），裸 <code>group-hover</code> 会匹配任意 <code>group</code> 祖先导致悬停编辑器任意处弹卡。刷新经 <code>setDiagnosticsEffect</code> 监听（lint state 对外私有，该 effect 是公开信号；两源每次 run 合并为单事务）；实现 <code>text-editor-lint-footer.tsx</code></td>
 </tr>
 <tr>
 <td>文件路径补全</td>
